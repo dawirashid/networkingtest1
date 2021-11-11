@@ -48,6 +48,10 @@ class WeatherResponse {
   final TemperatureInfo tempInfo;
   final WeatherInfo weatherInfo;
 
+  String get iconUrl {
+    return 'http://openweathermap.org/img/wn/${weatherInfo.icon}@2x.png';
+  }
+
   WeatherResponse(
       {required this.cityName,
       required this.tempInfo,
